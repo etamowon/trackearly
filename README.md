@@ -1,95 +1,128 @@
-# 🧭 TrackEarly
+# 💽 TrackEarly
 
-**TrackEarly** is a lightweight task management web app — a minimal MVP designed to handle task creation, updates, and tracking.
-It’s built on the **MERN stack** and deployed via **Vercel** (frontend) and **Railway** (backend).
+> A premium full-stack productivity app with a custom Y2K-inspired glassmorphic design, drag-and-drop task management, nested subtasks, and delightful micro-interactions.
 
-🌐 **Live Demo:** [https://trackearly.vercel.app](https://trackearly.vercel.app)
-🛠️ **API Endpoint:** [https://trackearly-production.up.railway.app/api/health](https://trackearly-production.up.railway.app/api/health)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-Backend-339933?logo=node.js)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?logo=mongodb)
+![Express](https://img.shields.io/badge/Express-API-black?logo=express)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?logo=vercel)
+![Railway](https://img.shields.io/badge/Railway-Backend-0B0D0E)
 
------
+TrackEarly goes beyond basic CRUD functionality by combining advanced front-end interactions with a scalable backend architecture. Users can organize tasks, manage subtasks, reorder items through drag-and-drop, search by custom tags, and enjoy a polished experience designed around productivity and visual satisfaction.
 
-## 🚀 Overview
+---
 
-TrackEarly is currently in its MVP stage, providing a basic to-do list experience with a focus on clean structure and modular scalability.
-The goal is to evolve this project into a full-featured personal productivity platform with user authentication, persistent data, and a more dynamic UI.
+## 🌐 Live Demo
 
------
+**Frontend:** https://trackearly.vercel.app
+
+**Backend Health Check:**  
+https://trackearly-production.up.railway.app/api/health
+
+---
+
+## ✨ Features
+
+### 🎨 Custom Y2K Glassmorphic Design
+- Deep plum aesthetic with frosted glass panels
+- Iridescent hover effects
+- Responsive layout for desktop and mobile
+- Smooth transitions and polished visual feedback
+
+### 🖱️ Drag-and-Drop Task Reordering
+- Reorder tasks with intuitive drag-and-drop controls
+- Powered by Framer Motion
+- Changes persist instantly to MongoDB
+
+### 📋 Nested Subtasks
+- Expand tasks into dedicated detail drawers
+- Create and manage mini-checklists
+- Track progress on larger goals
+
+### 🔍 Smart Search & Tagging
+- Add custom hashtags to tasks
+- Real-time filtering and search
+- Organize tasks by context such as:
+  - `#work`
+  - `#school`
+  - `#gym`
+  - `#personal`
+
+### ⏰ Priorities & Due Dates
+- Color-coded priority indicators
+- Visual urgency cues
+- Overdue tasks highlighted automatically
+
+### 🎉 Dopamine-Friendly UX
+- Custom toast notifications
+- Confetti celebration on task completion
+- Smooth animations throughout the application
+
+### 🗑️ Bulk Actions
+- Clear all completed tasks with a single click
+- Keep active task lists clean and organized
+
+---
 
 ## 🧱 Tech Stack
 
-### **Frontend**
+### Frontend
 
-  - ⚛️ **React** (Create React App)
-  - 🎨 **Tailwind CSS** for styling
-  - 🌍 **Vercel** for deployment
-  - 🌐 Environment variables for API connection (`REACT_APP_API_URL`)
+| Technology | Purpose |
+|------------|----------|
+| React | UI Development & State Management |
+| Tailwind CSS | Styling & Custom Design System |
+| Framer Motion | Drag-and-Drop & Animations |
+| React Hot Toast | Notifications |
+| Canvas Confetti | Completion Effects |
+| Vercel | Deployment |
 
-### **Backend**
+### Backend
 
-  - 🧩 **Node.js + Express**
-  - 🗄️ **MongoDB Atlas** (via **Mongoose**)
-  - 🛠️ **Railway** for hosting
-  - 🔐 Environment variables via `.env`
-  - 🌍 RESTful routes for CRUD task management
+| Technology | Purpose |
+|------------|----------|
+| Node.js | Runtime Environment |
+| Express.js | REST API |
+| MongoDB Atlas | Database |
+| Mongoose | Schema Modeling |
+| Railway | Backend Hosting |
 
-### **Directory Structure**
+---
 
-```
+## 📁 Project Structure
+
+```text
 trackearly/
-├── backend/
-│ ├── config/db.js # MongoDB connection logic
-│ ├── controllers/taskController.js # Task CRUD operations
-│ ├── models/Task.js # Mongoose task schema
-│ ├── routes/tasks.js # Express task routes
-│ ├── server.js # App entry point
-│ ├── package.json
-│ └── .env
 │
-└── frontend/
-├── src/
-│ ├── services/api.js # Axios/fetch API utilities
-│ ├── App.js # Root React component
-│ ├── index.js # Entry point
-│ └── index.css # Global styles
-├── tailwind.config.js
-├── postcss.config.js
-├── package.json
-└── .env
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── ...
+│
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── controllers/
+│   └── ...
+│
+└── README.md
 ```
 
------
+---
 
-## ⚙️ Features (MVP)
+## 🚀 Local Development
 
-  - Create, view, and delete tasks
-  - Persistent storage via MongoDB Atlas
-  - Simple REST API structure
-  - Responsive frontend powered by Tailwind
-  - Deployed full-stack setup (Railway + Vercel)
-
------
-
-## 🧭 Planned Features
-
-  - 🔑 User authentication (JWT-based login/signup)
-  - 📧 Email notification or verification system
-  - 🖼️ Enhanced UI/UX (unique dashboard layout & animations)
-  - S Task categories, due dates, and reminders
-  - 📊 Analytics or productivity stats
-  - ☁️ Improved deployment pipeline (CI/CD + staging)
-
------
-
-## 🧪 Local Development
-
-### **1. Clone the repo**
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/trackearly.git
+git clone https://github.com/YOUR_USERNAME/trackearly.git
 cd trackearly
 ```
 
-### **2. Backend setup**
+---
+
+### 2. Backend Setup
 
 ```bash
 cd backend
@@ -98,55 +131,120 @@ npm install
 
 Create a `.env` file:
 
-```
+```env
 PORT=5000
-MONGODB_URI=<your-mongo-uri>
+MONGODB_URI=your_mongodb_connection_string
 ```
 
-Start the server:
+Start the backend server:
 
 ```bash
 npm start
 ```
 
-### **3. Frontend setup**
+---
+
+### 3. Frontend Setup
+
+Open a new terminal:
 
 ```bash
-cd ../frontend
+cd frontend
 npm install
 ```
 
 Create a `.env` file:
 
-```
+```env
 REACT_APP_API_URL=http://localhost:5000/api
 ```
 
-Run the frontend:
+Start the frontend:
 
 ```bash
 npm start
 ```
 
------
+---
+
+## 📡 API Overview
+
+### Tasks
+
+| Method | Endpoint | Description |
+|----------|----------|----------|
+| GET | `/api/tasks` | Retrieve all tasks |
+| POST | `/api/tasks` | Create a new task |
+| PUT | `/api/tasks/:id` | Update a task |
+| DELETE | `/api/tasks/:id` | Delete a task |
+
+### Health Check
+
+```http
+GET /api/health
+```
+
+Returns:
+
+```json
+{
+  "status": "ok"
+}
+```
+
+---
 
 ## 📦 Deployment
 
-  - **Frontend:** [Vercel](https://vercel.com)
-    Environment variable → `REACT_APP_API_URL=https://trackearly-production.up.railway.app/api`
-  - **Backend:** [Railway](https://railway.app)
-    Environment variable → `MONGODB_URI` (Atlas URI)
+### Frontend (Vercel)
 
------
+Environment Variables:
+
+```env
+REACT_APP_API_URL=https://trackearly-production.up.railway.app/api
+```
+
+### Backend (Railway)
+
+Environment Variables:
+
+```env
+MONGODB_URI=your_atlas_connection_string
+PORT=5000
+```
+
+---
+
+## 🎯 What This Project Demonstrates
+
+- Full-stack MERN development
+- RESTful API design
+- MongoDB schema modeling
+- State management in React
+- Responsive UI design
+- Advanced animations with Framer Motion
+- Drag-and-drop interactions
+- Deployment and environment configuration
+- Modern UX principles and micro-interactions
+
+---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — feel free to fork and experiment.
+This project is licensed under the MIT License.
 
------
+---
 
-## ✨ Author
+## 👨‍💻 Author
 
+**Etam Wonkam**
+
+- GitHub: https://github.com/YOUR_GITHUB_USERNAME
+- LinkedIn: https://linkedin.com/in/YOUR_LINKEDIN
+
+---
+
+### ⭐ If you found this project interesting, consider giving it a star!
 **Etam Tamo Wonkam**
 🔗 [GitHub](https://github.com/yourusername)
 📧 (optional) [etamwonkam@email.com](mailto:etamwonkam@email.com)
