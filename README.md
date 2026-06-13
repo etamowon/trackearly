@@ -239,8 +239,8 @@ This project is licensed under the MIT License.
 
 **Etam Wonkam**
 
-- GitHub: https://github.com/YOUR_GITHUB_USERNAME
-- LinkedIn: https://linkedin.com/in/YOUR_LINKEDIN
+- GitHub: https://github.com/etamowon
+- LinkedIn: https://www.linkedin.com/in/etamw/
 
 ---
 
