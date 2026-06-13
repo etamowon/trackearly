@@ -5,7 +5,7 @@ const Task = require('../models/Task');
 // @access  Public
 exports.getTasks = async (req, res) => {
   try {
-    const tasks = await Task.find().sort({ createdAt: -1 });
+    const tasks = await Task.find().sort({ order: 1, createdAt: -1 });
     res.status(200).json({
       success: true,
       count: tasks.length,

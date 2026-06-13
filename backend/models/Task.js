@@ -19,7 +19,28 @@ const taskSchema = new mongoose.Schema({
   dueDate: {
     type: Date,
     default: null
-  }
+  },
+  // NEW FIELDS FOR Y2K REDESIGN:
+  priority: {
+    type: String,
+    enum: ['low', 'medium', 'high'],
+    default: 'medium'
+  },
+  tags: [{
+    type: String,
+    trim: true
+  }],
+  order: {
+    type: Number,
+    default: 0 // Needed for drag-and-drop sorting
+  },
+  subtasks: [{
+    title: String,
+    completed: {
+      type: Boolean,
+      default: false
+    }
+  }]
 }, {
   timestamps: true
 });
